@@ -94,3 +94,36 @@ Array.prototype.zip = function(arr, transform = (val1, val2) => val1 + val2) {
 Object.prototype.reducer = function(transform, init = {}) {
 
 };
+
+
+
+// Returns a Boolean indicating whether or not the supplied input number is (`true`)
+//  or is not (`false`) a prime number:
+export const isPrime = (num = 1) => {
+  let i = 2;
+  while (i <= Math.round(Math.sqrt(num))) {
+    if (!(num % i++)) return false;
+  }
+  return true;
+};
+
+// Returns the prime factorization of the supplied input value:
+export const getPrimeFactorization = (num = 1) => {
+  if (isPrime(num)) return [num];
+
+  let primeFactors = [];
+
+};
+
+// Returns an ordered (least-to-greatest) array of values representing all of the
+//  supplied input value's factors:
+export const getFactors = (num = 1) => {
+  let factors = [1, num],
+      halvedNum = (Math.round(num / 2)),
+      i = 2;
+  while (i <= halvedNum) {
+    if (!(num % i)) factors.push(i);
+    i++;
+  }
+  return factors.numSort();
+};
