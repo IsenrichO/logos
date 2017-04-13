@@ -1,9 +1,12 @@
 {
   "name": "logos",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "GPL-3.0",
   "description": "A general-purpose mathematics library built with Functional Programming in mind",
+  "engines": {
+    "node": ">=4.2.4"
+  },
   "keywords": [
     "logo",
     "Mathematics Library",
