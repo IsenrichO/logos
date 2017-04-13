@@ -20,6 +20,13 @@ export const MathOps = new Map([
 ]);
 
 
+// Conversion formula to transfer from units of radians (rads) to degrees (°):
+export const radsToDegs = (rads = 1) => (180 * rads).div(Math.PI);
+
+// Conversion formula to transfer from units of degress (°) to radians (rads):
+export const degsToRads = (degs = 1) => (Math.PI * degs).div(180);
+
+
 // Returns the reciprocal of a number or fraction:
 export const reciprocal = (exp = 1) => (1 / exp);
 
@@ -58,8 +65,8 @@ Number.prototype.abs = function() { return Math.abs(this); };
 Number.prototype.sqrt = function() { return Math.sqrt(this); };
 Number.prototype.cbrt = function() { return Math.pow(this, reciprocal(3)); };
 Number.prototype.nthRoot = function(root = 2) { return Math.pow(this, reciprocal(root)); };
-Number.prototype.square = function() { return Math.pow(this, 2); };
-Number.prototype.cube = function() { return Math.pow(this, 3); };
+Number.prototype.squared = function() { return Math.pow(this, 2); };
+Number.prototype.cubed = function() { return Math.pow(this, 3); };
 Number.prototype.nthPower = function(power = 1) { return Math.pow(this, power); };
 
 

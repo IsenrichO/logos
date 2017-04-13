@@ -16,13 +16,13 @@ class Point {
   }
 
   static getDistanceFromOrigin() {
-    return reducer(this.coords, (memo, curr) => memo += curr.square()).sqrt();
+    return reducer(this.coords, (memo, curr) => memo += curr.squared()).sqrt();
   }
 
   static getDistanceFromPoint(point) {
     return reducer(
       this.coords.zip(point.coords, (pt1, pt2) => Math.abs(pt2 - pt1)),
-      (memo, curr) => memo += curr.square()
+      (memo, curr) => memo += curr.squared()
     ).sqrt();
   }
 }
