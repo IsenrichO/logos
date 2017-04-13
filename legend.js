@@ -1,3 +1,5 @@
+'use strict';
+
 
 /*
  * Constant are most recognizable in that they are referred to using ALL-CAPS, in

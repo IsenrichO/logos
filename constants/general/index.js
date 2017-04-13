@@ -1,3 +1,5 @@
+'use strict';
+
 
 // Zero, 0, the basis upon which the number field of integers, ℤ, can be divided
 //  into those with positive (+) sign and those with negative (-) sign. It fulfills
