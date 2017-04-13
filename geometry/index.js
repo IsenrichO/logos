@@ -26,3 +26,40 @@ class Point {
     ).sqrt();
   }
 }
+
+export { Point };
+
+
+// Returns the computed slope between two lines:
+export const getSlope = (pt1, pt2) => ((pt2.y - pt1.y) / (pt2.x - pt1.x));
+
+// Returns the coordinates of the midpoint of a line segment as specified by
+//  the supplied endpoint (`ep`) inputs:
+export const getMidpoint = (ep1, ep2) => ({
+  x: ((ep1.x + ep2.x) / 2),
+  y: ((ep1.y + ep2.y) / 2)
+});
+
+// Return the equation of a line in slope-intercept form (y = mx + b):
+export const slopeInterceptForm = (pt1, pt2) => {
+  const slope = getSlope(pt1, pt2),
+        yIntercept = pt1.y - (slope * pt1.x);
+  console.log(
+    `Slope-Intercept Form Linear Equation:\n\
+    \`y = ${slope}x + ${yIntercept}\``
+  );
+  return (x) => (slope * x) + yIntercept;
+};
+
+// Return the equation of a line in standard form (Ax + By = C, s.t. A >= 1):
+export const standardForm = (pt1, pt2) => {
+  const slope = getSlope(pt1, pt2),
+        yIntercept = pt1.y - (slope * pt1.x);
+  const coefficientA = slope * (m > 0 ? -1 : 1),
+        coefficientB = (m > 0 ? -1 : 1),
+        coefficientC = yIntercept * (m > 0 ? -1 : 1);
+  console.log(
+    `Standard Form Linear Equation:\n\
+    \`${coefficientA}x + ${coefficientB}y = ${coefficientC}\``
+  );
+};
