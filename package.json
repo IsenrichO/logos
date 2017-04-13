@@ -1,0 +1,25 @@
+{
+  "name": "logos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "description": "A general-purpose mathematics library built with Functional Programming in mind",
+  "keywords": [
+    "logo",
+    "Mathematics Library",
+    "Functional Programming",
+    "Oliver Isenrich"
+  ],
+  "author": "Oliver Isenrich <isenrich@yahoo.com> (http://isenrich.io)",
+  "contributors": [
+    "Oliver Isenrich <isenrich@yahoo.com> (http://isenrich.io)"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --colors --inline --profile --progress",
+    "lint": "eslint app",
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -w"
+  }
+}
